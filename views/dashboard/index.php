@@ -1,5 +1,5 @@
-<?php require_once '../../app/config.php';?>
-<?php //require_once(MAIN_PATH."views/inc/header.php");?>
+<?php  require_once '../../app/config.php';?>
+<?php  //require_once(MAIN_PATH."views/inc/header.php");?>
 <!DOCTYPE html>
 <html>
 
@@ -10,31 +10,32 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="<?php URL."public/dashboard/" ;?>plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="<?php echo URL."public/dashboard/" ;?>plugins/fontawesome-free/css/all.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Tempusdominus Bbootstrap 4 -->
     <link rel="stylesheet"
-        href="<?php URL."public/dashboard/" ;?>plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+        href="<?php echo URL."public/dashboard/" ;?>plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
     <!-- iCheck -->
-    <link rel="stylesheet" href="<?php URL."public/dashboard/" ;?>plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <link rel="stylesheet"
+        href="<?php echo URL."public/dashboard/" ;?>plugins/icheck-bootstrap/icheck-bootstrap.min.css">
     <!-- JQVMap -->
-    <link rel="stylesheet" href="<?php URL."public/dashboard/" ;?>plugins/jqvmap/jqvmap.min.css">
+    <link rel="stylesheet" href="<?php echo URL."public/dashboard/" ;?>plugins/jqvmap/jqvmap.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="<?php echo URL."public/dashboard/" ;?>dist/css/adminlte.min.css">
     <!-- overlayScrollbars -->
     <link rel="stylesheet"
-        href="<?php URL."public/dashboard/" ;?>plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+        href="<?php echo URL."public/dashboard/" ;?>plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <!-- Daterange picker -->
-    <link rel="stylesheet" href="<?php URL."public/dashboard/" ;?>plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="<?php echo URL."public/dashboard/" ;?>plugins/daterangepicker/daterangepicker.css">
     <!-- summernote -->
-    <link rel="stylesheet" href="<?php URL."public/dashboard/" ;?>plugins/summernote/summernote-bs4.css">
+    <link rel="stylesheet" href="<?php echo URL."public/dashboard/" ;?>plugins/summernote/summernote-bs4.css">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <!-- Bootstrap 4 RTL -->
     <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css">
     <!-- Custom style for RTL -->
-    <link rel="stylesheet" href="<?php URL."public/dashboard/" ;?>dist/css/custom.css">
+    <link rel="stylesheet" href="<?php echo URL."public/dashboard/" ;?>dist/css/custom.css">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -67,7 +68,6 @@
                     </div>
                 </div>
             </form>
-
             <!-- Right navbar links -->
             <ul class="navbar-nav mr-auto-navbav">
                 <!-- Messages Dropdown Menu -->
@@ -205,19 +205,19 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="./index.html" class="nav-link active">
+                                    <a href="../../Templetes/AdminLTE-3-RTL-master/index.html" class="nav-link active">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Dashboard v1</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="./index2.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/index2.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Dashboard v2</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="./index3.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/index3.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Dashboard v3</p>
                                     </a>
@@ -225,7 +225,7 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/widgets.html" class="nav-link">
+                            <a href="Templetes/AdminLTE-3-RTL-master/pages/widgets.html" class="nav-link">
                                 <i class="nav-icon fas fa-th"></i>
                                 <p>
                                     Widgets
@@ -244,37 +244,42 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="pages/layout/top-nav.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/layout/top-nav.html"
+                                        class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Top Navigation</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/layout/boxed.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/layout/boxed.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Boxed</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/layout/fixed-sidebar.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/layout/fixed-sidebar.html"
+                                        class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Fixed Sidebar</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/layout/fixed-topnav.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/layout/fixed-topnav.html"
+                                        class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Fixed Navbar</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/layout/fixed-footer.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/layout/fixed-footer.html"
+                                        class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Fixed Footer</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/layout/collapsed-sidebar.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/layout/collapsed-sidebar.html"
+                                        class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Collapsed Sidebar</p>
                                     </a>
@@ -291,19 +296,20 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="pages/charts/chartjs.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/charts/chartjs.html"
+                                        class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>ChartJS</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/charts/flot.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/charts/flot.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Flot</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/charts/inline.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/charts/inline.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Inline</p>
                                     </a>
@@ -320,49 +326,49 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="pages/UI/general.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/UI/general.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>General</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/UI/icons.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/UI/icons.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Icons</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/UI/buttons.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/UI/buttons.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Buttons</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/UI/sliders.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/UI/sliders.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Sliders</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/UI/modals.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/UI/modals.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Modals & Alerts</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/UI/navbar.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/UI/navbar.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Navbar & Tabs</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/UI/timeline.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/UI/timeline.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Timeline</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/UI/ribbons.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/UI/ribbons.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Ribbons</p>
                                     </a>
@@ -379,19 +385,20 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="pages/forms/general.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/forms/general.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>General Elements</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/forms/advanced.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/forms/advanced.html"
+                                        class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Advanced Elements</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/forms/editors.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/forms/editors.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Editors</p>
                                     </a>
@@ -408,19 +415,19 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="pages/tables/simple.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/tables/simple.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Simple Tables</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/tables/data.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/tables/data.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>DataTables</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/tables/jsgrid.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/tables/jsgrid.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>jsGrid</p>
                                     </a>
@@ -429,7 +436,7 @@
                         </li>
                         <li class="nav-header">EXAMPLES</li>
                         <li class="nav-item">
-                            <a href="pages/calendar.html" class="nav-link">
+                            <a href="Templetes/AdminLTE-3-RTL-master/pages/calendar.html" class="nav-link">
                                 <i class="nav-icon far fa-calendar-alt"></i>
                                 <p>
                                     Calendar
@@ -438,7 +445,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/gallery.html" class="nav-link">
+                            <a href="Templetes/AdminLTE-3-RTL-master/pages/gallery.html" class="nav-link">
                                 <i class="nav-icon far fa-image"></i>
                                 <p>
                                     Gallery
@@ -455,19 +462,22 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="pages/mailbox/mailbox.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/mailbox/mailbox.html"
+                                        class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Inbox</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/mailbox/compose.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/mailbox/compose.html"
+                                        class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Compose</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/mailbox/read-mail.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/mailbox/read-mail.html"
+                                        class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Read</p>
                                     </a>
@@ -484,49 +494,57 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="pages/examples/invoice.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/examples/invoice.html"
+                                        class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Invoice</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/examples/profile.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/examples/profile.html"
+                                        class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Profile</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/examples/e_commerce.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/examples/e_commerce.html"
+                                        class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>E-commerce</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/examples/projects.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/examples/projects.html"
+                                        class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Projects</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/examples/project_add.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/examples/project_add.html"
+                                        class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Project Add</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/examples/project_edit.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/examples/project_edit.html"
+                                        class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Project Edit</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/examples/project_detail.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/examples/project_detail.html"
+                                        class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Project Detail</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/examples/contacts.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/examples/contacts.html"
+                                        class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Contacts</p>
                                     </a>
@@ -543,49 +561,55 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="pages/examples/login.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/examples/login.html"
+                                        class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Login</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/examples/register.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/examples/register.html"
+                                        class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Register</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/examples/lockscreen.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/examples/lockscreen.html"
+                                        class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Lockscreen</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/examples/legacy-user-menu.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/examples/legacy-user-menu.html"
+                                        class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Legacy User Menu</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/examples/language-menu.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/examples/language-menu.html"
+                                        class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Language Menu</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/examples/404.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/examples/404.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Error 404</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/examples/500.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/examples/500.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Error 500</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/examples/blank.html" class="nav-link">
+                                    <a href="Templetes/AdminLTE-3-RTL-master/pages/examples/blank.html"
+                                        class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Blank Page</p>
                                     </a>
@@ -1281,9 +1305,9 @@
     <!-- ./wrapper -->
 
     <!-- jQuery -->
-    <script src="<?php URL."public/dashboard/" ;?>plugins/jquery/jquery.min.js"></script>
+    <script src="<?php echo URL."public/dashboard/" ;?>plugins/jquery/jquery.min.js"></script>
     <!-- jQuery UI 1.11.4 -->
-    <script src="<?php URL."public/dashboard/" ;?>plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="<?php echo URL."public/dashboard/" ;?>plugins/jquery-ui/jquery-ui.min.js"></script>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
     <script>
     $.widget.bridge('uibutton', $.ui.button)
@@ -1291,34 +1315,34 @@
     <!-- Bootstrap 4 rtl -->
     <script src="https://cdn.rtlcss.com/bootstrap/v4.2.1/js/bootstrap.min.js"></script>
     <!-- Bootstrap 4 -->
-    <script src="<?php URL."public/dashboard/" ;?>plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="<?php echo URL."public/dashboard/" ;?>plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- ChartJS -->
-    <script src="<?php URL."public/dashboard/" ;?>plugins/chart.js/Chart.min.js"></script>
+    <script src="<?php echo URL."public/dashboard/" ;?>plugins/chart.js/Chart.min.js"></script>
     <!-- Sparkline -->
-    <script src="<?php URL."public/dashboard/" ;?>plugins/sparklines/sparkline.js"></script>
+    <script src="<?php echo URL."public/dashboard/" ;?>plugins/sparklines/sparkline.js"></script>
     <!-- JQVMap -->
-    <script src="<?php URL."public/dashboard/" ;?>plugins/jqvmap/jquery.vmap.min.js"></script>
-    <script src="<?php URL."public/dashboard/" ;?>plugins/jqvmap/maps/jquery.vmap.world.js"></script>
+    <script src="<?php echo URL."public/dashboard/" ;?>plugins/jqvmap/jquery.vmap.min.js"></script>
+    <script src="<?php echo URL."public/dashboard/" ;?>plugins/jqvmap/maps/jquery.vmap.world.js"></script>
     <!-- jQuery Knob Chart -->
-    <script src="<?php URL."public/dashboard/" ;?>plugins/jquery-knob/jquery.knob.min.js"></script>
+    <script src="<?php echo URL."public/dashboard/" ;?>plugins/jquery-knob/jquery.knob.min.js"></script>
     <!-- daterangepicker -->
-    <script src="<?php URL."public/dashboard/" ;?>plugins/moment/moment.min.js"></script>
-    <script src="<?php URL."public/dashboard/" ;?>plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="<?php echo URL."public/dashboard/" ;?>plugins/moment/moment.min.js"></script>
+    <script src="<?php echo URL."public/dashboard/" ;?>plugins/daterangepicker/daterangepicker.js"></script>
     <!-- Tempusdominus Bootstrap 4 -->
     <script
-        src="<?php URL."public/dashboard/" ;?>plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js">
+        src="<?php echo URL."public/dashboard/" ;?>plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js">
     </script>
     <!-- Summernote -->
-    <script src="<?php URL."public/dashboard/" ;?>plugins/summernote/summernote-bs4.min.js"></script>
+    <script src="<?php echo URL."public/dashboard/" ;?>plugins/summernote/summernote-bs4.min.js"></script>
     <!-- overlayScrollbars -->
-    <script src="<?php URL."public/dashboard/" ;?>plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js">
+    <script src="<?php echo URL."public/dashboard/" ;?>plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js">
     </script>
     <!-- AdminLTE App -->
-    <script src="<?php URL."public/dashboard/" ;?>dist/js/adminlte.js"></script>
+    <script src="<?php echo URL."public/dashboard/" ;?>dist/js/adminlte.js"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="<?php URL."public/dashboard/" ;?>dist/js/pages/dashboard.js"></script>
+    <script src="<?php echo URL."public/dashboard/" ;?>dist/js/pages/dashboard.js"></script>
     <!-- AdminLTE for demo purposes -->
-    <script src="<?php URL."public/dashboard/" ;?>dist/js/demo.js"></script>
+    <script src="<?php echo URL."public/dashboard/" ;?>dist/js/demo.js"></script>
 </body>
 
 </html>
