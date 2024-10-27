@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>ZenBlog PHP - Index</title>
+    <title>Osama News | الصفحة الرئيسية</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -50,36 +50,40 @@
             <a href="index.html" class="logo d-flex align-items-center">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
                 <!-- <img src="<?php echo URL. "public/front/";?>assets/img/logo.png" alt=""> -->
-                <h1>ZenBlog</h1>
+                <h1>Osama News</h1>
             </a>
 
             <nav id="navbar" class="navbar">
                 <ul>
                     <li><a href="index.html">الرئيسية</a></li>
                     <!-- <li><a href="single-post.html">Single Post</a></li> -->
-                    <li class="dropdown"><a href="category.html"><span>الأخبار</span> <i
+                    <li class="dropdown"><a href="category.html"><span>منوعات</span> <i
                                 class="bi bi-chevron-down dropdown-indicator"></i></a>
                         <ul>
-                            <li><a href="search-result.html">Search Result</a></li>
-                            <li><a href="#">Drop Down 1</a></li>
-                            <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i
+                            <li><a href="#">مصر</a></li>
+                            <li><a href="#">رياضة</a></li>
+                            <li><a href="#">العالم</a></li>
+                            <li><a href="#">فن</a></li>
+                            <li><a href="#">سيارات</a></li>
+                            <li><a href="#">إقتصاد</a></li>
+                            <li><a href="#">صحه</a></li>
+                            <li class="dropdown"><a href="#"><span>دول</span> <i
                                         class="bi bi-chevron-down dropdown-indicator"></i></a>
                                 <ul>
-                                    <li><a href="#">Deep Drop Down 1</a></li>
-                                    <li><a href="#">Deep Drop Down 2</a></li>
-                                    <li><a href="#">Deep Drop Down 3</a></li>
-                                    <li><a href="#">Deep Drop Down 4</a></li>
-                                    <li><a href="#">Deep Drop Down 5</a></li>
+                                    <li><a href="#">مصر</a></li>
+                                    <li><a href="#">الكويت</a></li>
+                                    <li><a href="#">السعودية</a></li>
+                                    <li><a href="#">الأمارات</a></li>
+                                    <li><a href="#">فلسطين</a></li>
+                                    <li><a href="#">الاردن</a></li>
+                                    <li><a href="#">قطر</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Drop Down 2</a></li>
-                            <li><a href="#">Drop Down 3</a></li>
-                            <li><a href="#">Drop Down 4</a></li>
                         </ul>
                     </li>
 
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">عاجل</a></li>
+                    <li><a href="contact.html">أعلن معنا</a></li>
                 </ul>
             </nav><!-- .navbar -->
 
@@ -768,7 +772,7 @@
     </main><!-- End #main -->
 
     <!-- ======= Footer ======= -->
-    <footer id="footer" class="footer">
+    <footer id="footer" class="footer" dir="rtl">
 
         <div class="footer-content">
             <div class="container">
