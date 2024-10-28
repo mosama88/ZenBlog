@@ -84,6 +84,7 @@
 
                     <li><a href="about.html">عاجل</a></li>
                     <li><a href="contact.html">أعلن معنا</a></li>
+                    <li><a href="<?php echo URL . "views/dashboard/index.php"?>">لوحة التحكم</a></li>
                 </ul>
             </nav><!-- .navbar -->
 
