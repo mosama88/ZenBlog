@@ -1,4 +1,12 @@
-<?php  require_once '../../../app/config.php';?>
+<?php  
+require_once '../../../app/config.php';
+
+    $conn = mysqli_connect(hostname,username,password,database);
+    $sql = "SELECT * FROM `categories`";
+
+        $result = mysqli_query($conn,$sql);
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -761,10 +769,10 @@
                         <div class="card">
                             <div class="card-header">
                                 <div class="row">
-                                    <div class="col-10">
+                                    <div class="col-9">
                                         <h5 class="">جدول الفئات</h5>
                                     </div>
-                                    <div class="col-2">
+                                    <div class="col-3">
                                         <button type="button" class="btn btn-primary" data-toggle="modal"
                                             data-target="#modal-primary">
                                             أضف فئة جديده
@@ -778,23 +786,27 @@
                                 <table id="example2" class="table table-bordered table-hover">
                                     <thead>
                                         <tr>
-                                            <th>Rendering engine</th>
-                                            <th>Browser</th>
-                                            <th>Platform(s)</th>
-                                            <th>Engine version</th>
-                                            <th>CSS grade</th>
+                                            <th>المسلسل</th>
+                                            <th>أسم الفئة</th>
+                                            <th>العمليات</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <?php
+                                          $i = 0;
+                                        while ($row = mysqli_fetch_assoc($result)):
+                                          
+                                            $i++
+                                            ?>
                                         <tr>
-                                            <td>Trident</td>
-                                            <td>Internet
-                                                Explorer 4.0
+                                            <td><?php echo $i ;?></td>
+                                            <td><?php echo $row['name'];?></td>
+                                            <td>
+                                                <a type="button"  href="<?php echo URL . "handlers/edit-categories.php?id=" . $row['id'];?>" class="btn btn-small btn-info btn-sm text-white">تعديل</a>
+                                                <a type="button" href="<?php echo URL . "handlers/delete-categories.php?id=" . $row['id'];?>" class="btn btn-small btn-danger btn-sm text-white">حذف</a>
                                             </td>
-                                            <td>Win 95+</td>
-                                            <td> 4</td>
-                                            <td>X</td>
                                         </tr>
+                                        <?php endwhile;?>
                                     </tbody>
 
                                     </tfoot>
