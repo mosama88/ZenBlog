@@ -2,7 +2,7 @@
 require_once '../../../app/config.php';
 
     $conn = mysqli_connect(hostname,username,password,database);
-    $sql = "SELECT * FROM `categories`";
+    $sql = "SELECT * FROM `categories` ORDER BY id DESC";
 
         $result = mysqli_query($conn,$sql);
 
