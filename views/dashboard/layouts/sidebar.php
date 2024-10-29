@@ -23,16 +23,15 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                 data-accordion="false">
 
-
                 <li class="nav-item">
                     <a href="<?php echo URL."views/dashboard/"; ?>index.php" class="nav-link active">
                         <i class="nav-icon fas fa-th"></i>
-                        <p>
-                            لوحة التحكم
-                        </p>
+                        <p>لوحة التحكم</p>
                     </a>
                 </li>
-                <li class="nav-item has-treeview menu-open">
+
+
+                <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
@@ -42,18 +41,16 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="<?php echo URL."views/dashboard/categories/"?>index.php" class="nav-link">
+                            <a href="<?php echo URL ."views/dashboard/"?>categories/index.php" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>جدول الفئات</p>
                             </a>
                         </li>
                     </ul>
                 </li>
-
-
                 <!-- Add icons to the links using the .nav-icon class
        with font-awesome or any other icon font library -->
-                <li class="nav-item has-treeview menu-open">
+                <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>

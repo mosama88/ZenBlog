@@ -1,9 +1,7 @@
 <?php
-session_start();
-define("hostname","localhost");
-define("username","root");
-define("password","");
-define("database","osama_news_db");
+
+
+require_once '../app/config.php';
 
 $errors = [];
 $success = [];

@@ -4,6 +4,7 @@ define("hostname","localhost");
 define("username","root");
 define("password","");
 define("database","osama_news_db");
+
 $conn = mysqli_connect(hostname,username,password);
 
 if(!$conn){
