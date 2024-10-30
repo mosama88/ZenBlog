@@ -1,5 +1,10 @@
 <?php
-    require_once '../../../app/config.php'; ?>
+    require_once '../../../app/config.php';
+    $sql = "SELECT * FROM cities";
+    $conn = mysqli_connect(hostname, username, password, database);
+    $result = mysqli_query($conn, $sql);
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -274,6 +279,14 @@
             "info": true,
             "autoWidth": false,
         });
+    });
+</script>
+
+<script>
+    $("#modal-primary").modal({
+        backdrop: 'static',
+        keyboard: false,
+        show: false,
     });
 </script>
 
