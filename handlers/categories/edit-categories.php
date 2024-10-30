@@ -9,22 +9,18 @@
     }
     
     
-    if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['name'])) {
+    if (checkMethodRequest("POST") == "POST" && isset($_POST['name'])) {
         
-        $name = trim(htmlspecialchars(htmlentities($_POST['name'])));
+    $name = sanitizeInpt($_POST['name']);
         $id = $_GET['id'];
         
-        // echo $title;
-        
         if (strlen($name) < 3) {
-            $_SESSION['errors'] = "title of task must be greater than 3 chars ";
+            $_SESSION['errors'] = "Name of task must be greater than 3 chars ";
         }
-        
         
         if (empty($_SESSION['errors'])) {
             $sql = "UPDATE `categories` SET `name`='$name' WHERE `id` = $id ";
             $result = mysqli_query($conn, $sql);
-            // echo mysqli_affected_rows($conn);
             if ($result) {
                 $_SESSION['success'] = "data updated succefully";
             }

@@ -105,27 +105,30 @@
                         
                         <!-- /.card-header -->
                         <div class="card-body">
-                            <?php if (isset($_SESSION['errors'])):
-                                foreach ($_SESSION['errors'] as $errors):
-                                    ?>
-                                    
-                                    <div class="alert alert-danger" role="alert">
-                                        <?php echo $errors; ?>
-                                    </div>
-                                <?php
-                                endforeach;
-                                unset($_SESSION['errors']);
-                            endif; ?>
-                            
-                            <?php if (isset($_SESSION['success'])):
+                     <?php
+                        if (!empty($_SESSION['errors']) && isset($_SESSION['errors'])):
+                            foreach ($_SESSION['errors'] as $error):
                                 ?>
-                                
-                                <div class="alert alert-success" role="alert">
-                                    <?php echo $_SESSION['success']; ?>
+                                <div class="alert alert-danger" role="alert">
+                                    <?php echo $error; ?>
                                 </div>
-                                <?php
-                                unset($_SESSION['success']);
-                            endif; ?>
+                            
+                            <?php
+                            endforeach;
+                            unset($_SESSION['errors']);
+                        endif;
+                    ?>
+                    <?php if (!empty($_SESSION['success']) && isset($_SESSION['success'])): ?>
+                        <div class="alert alert-success" role="alert">
+                            <?php echo $_SESSION['success']; ?>
+                        </div>
+                        <?php
+                        
+                        unset($_SESSION['success']);
+                    endif;
+                    ?>
+                            
+                           
                             <table id="example2" class="table table-bordered table-hover">
                                 <thead>
                                     <tr>
@@ -143,7 +146,7 @@
                                     <td><?php echo $i;?></td>
                                     <td><?php echo $row['name'];?></td>
                                     <td>
-                                        <a type="button" href="<?php echo URL . "views/dashboard/cities/edit.php"; ?>"
+                                        <a type="button" href="<?php echo URL . "views/dashboard/cities/edit.php?id=" . $row['id']; ?>"
                                            class="btn btn-small btn-info btn-sm text-white">تعديل</a>
                                         <a type="button" onclick = "return confirm('هل انت متأكد من الحذف')"
                                          href="<?php echo URL . "handlers/cities/delete-cities.php?id=" . $row['id']; ?>"

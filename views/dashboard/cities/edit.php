@@ -1,5 +1,23 @@
 <?php
     require_once '../../../app/config.php';
+    if(isset($_GET['id'])){
+        $conn = mysqli_connect(hostname, username, password, database);
+        $errors= [];
+        $_SESSION['errors'] = $errors;
+if(!$conn){
+   echo  $errors[] = "خطأ فى الاتصال بقاعدة البيانات" . mysqli_connect_error($conn);
+}
+$id = $_GET['id'];
+$sql = "SELECT * FROM cities WHERE `id` = '$id'";
+$result = mysqli_query($conn,$sql);
+$row = mysqli_fetch_assoc($result);
+
+if(!$row){
+     echo $errors[] = "البيانات غير موجودة بقاعدة البيانات";
+    redirect(URL . "views/dashboard/cities/index.php");
+}
+
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -94,11 +112,11 @@
                         <div class="card-body">
                             
                             
-                            <form method="POST" action="#" role="form">
+                            <form method="POST" action="<?= URL. "handlers/cities/edit-cities.php?id=" . $_GET['id'] ;?>" role="form">
                                 <div class="form-group col-6 mb-3">
                                     <label for="exampleInputCategory">أسم المدينه</label>
                                     
-                                    <input type="text" name="name" id="name" value=""
+                                    <input type="text" name="name" id="name" value="<?= $row['name']?>"
                                            class="form-control" placeholder="أدخل أسم المدينه">
                                 
                                 

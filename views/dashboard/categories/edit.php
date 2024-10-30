@@ -20,8 +20,7 @@
         }
     }
     
-    // echo "<pre>";
-    // print_r();
+
 
 
 ?>
@@ -148,12 +147,9 @@
                                 
                                 <div class="form-group col-6 mb-3">
                                     <label for="exampleInputCategory">أسم الفئة</label>
-                                    <?php if (isset($row)) : ?>
                                         <input type="text" name="name" id="name" value="<?php echo $row['name']; ?>"
                                                class="form-control" placeholder="أدخل أسم الفئة">
-                                    <?php else : ?>
-                                        <p>لم يتم العثور على بيانات الفئة.</p>
-                                    <?php endif; ?>
+                                      
                                 
                                 
                                 </div>
