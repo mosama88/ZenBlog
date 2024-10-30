@@ -25,6 +25,7 @@
                 $_SESSION['success'] = "data updated succefully";
             }
         } else {
+            
         redirect("../../views/dashboard/categories/index.php");
             die;
             
