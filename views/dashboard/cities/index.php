@@ -82,6 +82,7 @@
                 <!-- </div>-->
                 <div class="col-12">
                     
+                    
                     <div class="card">
                         <div class="card-header">
                             <div class="row">
@@ -99,6 +100,27 @@
                         
                         <!-- /.card-header -->
                         <div class="card-body">
+                            <?php if (isset($_SESSION['errors'])):
+                                foreach ($_SESSION['errors'] as $errors):
+                                    ?>
+                                    
+                                    <div class="alert alert-danger" role="alert">
+                                        <?php echo $errors; ?>
+                                    </div>
+                                <?php
+                                endforeach;
+                                unset($_SESSION['errors']);
+                            endif; ?>
+                            
+                            <?php if (isset($_SESSION['success'])):
+                                ?>
+                                
+                                <div class="alert alert-success" role="alert">
+                                    <?php echo $_SESSION['success']; ?>
+                                </div>
+                                <?php
+                                unset($_SESSION['success']);
+                            endif; ?>
                             <table id="example2" class="table table-bordered table-hover">
                                 <thead>
                                 <tr>
@@ -165,9 +187,10 @@
                         
                         <div class="card card-primary">
                             
+                            
                             <!-- /.card-header -->
                             <!-- form start -->
-                            <form method="POST" action="#"
+                            <form method="POST" action="<?php echo URL . "handlers/cities/store-cities.php" ?>"
                                   role="form">
                                 <div class="card-body">
                                     <div class="form-group">
