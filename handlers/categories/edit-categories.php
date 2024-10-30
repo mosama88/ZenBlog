@@ -29,13 +29,13 @@
                 $_SESSION['success'] = "data updated succefully";
             }
         } else {
-            header("location: ../../views/dashboard/categories/index.php");
+        redirect("../../views/dashboard/categories/index.php");
             die;
             
         }
         
         
         // redirection
-        header("location: ../../views/dashboard/categories/index.php");
+        redirect("../../views/dashboard/categories/index.php");
         
     }

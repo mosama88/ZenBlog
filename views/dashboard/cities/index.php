@@ -1,7 +1,7 @@
 <?php
     require_once '../../../app/config.php';
-    $sql = "SELECT * FROM cities";
     $conn = mysqli_connect(hostname, username, password, database);
+    $sql = "SELECT * FROM cities ORDER BY id DESC";
     $result = mysqli_query($conn, $sql);
 
 ?>
@@ -128,24 +128,31 @@
                             endif; ?>
                             <table id="example2" class="table table-bordered table-hover">
                                 <thead>
-                                <tr>
-                                    <th>المسلسل</th>
-                                    <th>أسم المدينه</th>
-                                    <th>العمليات</th>
-                                </tr>
+                                    <tr>
+                                        <th>المسلسل</th>
+                                        <th>أسم المدينه</th>
+                                        <th>العمليات</th>
+                                    </tr>
                                 </thead>
                                 <tbody>
+                                    <?php $i=0?>
+                                    <?php while($row=mysqli_fetch_assoc($result)):?>
+                                    <?php $i++?>
+
                                 <tr>
-                                    <td>X</td>
-                                    <td>X</td>
+                                    <td><?php echo $i;?></td>
+                                    <td><?php echo $row['name'];?></td>
                                     <td>
                                         <a type="button" href="<?php echo URL . "views/dashboard/cities/edit.php"; ?>"
                                            class="btn btn-small btn-info btn-sm text-white">تعديل</a>
-                                        <a type="button" href="#"
+                                        <a type="button" onclick = "return confirm('هل انت متأكد من الحذف')"
+                                         href="<?php echo URL . "handlers/cities/delete-cities.php?id=" . $row['id']; ?>"
                                            class="btn btn-small btn-danger btn-sm text-white">حذف</a>
                                     
                                     </td>
                                 </tr>
+                                    <?php endwhile;?>
+
                                 </tbody>
                                 
                                 </tfoot>

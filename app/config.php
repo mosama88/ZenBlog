@@ -9,6 +9,5 @@ define("URL", "http://localhost/ZenBlog/");
 
 require_once 'db.php';
 require_once 'functions.php';
-require_once 'messages.php';
 require_once 'session.php';
 require_once 'validations.php';

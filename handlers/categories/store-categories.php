@@ -26,10 +26,10 @@
         $sql = "INSERT INTO `categories` (`name`)VALUES('$name')";
         $result = mysqli_query($conn, $sql);
         $_SESSION['success'] = $success;
-        header("location: ../../views/dashboard/categories/index.php");
+        redirect("../../views/dashboard/categories/index.php");
         die();
     } else {
         $_SESSION['errors'] = $errors;
-        header("location: ../../views/dashboard/categories/index.php");
+        redirect("../../views/dashboard/categories/index.php");
         die();
     }

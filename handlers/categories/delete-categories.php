@@ -25,6 +25,6 @@
         $_SESSION['errors'] = $errors;
         $_SESSION['success'] = $success;
         
-        header("location: ../../views/dashboard/categories/index.php");
+        redirect("../../views/dashboard/categories/index.php");
         
     }
