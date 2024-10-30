@@ -1,25 +1,41 @@
 <?php
-require_once '../app/config.php';
-
-if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['name'])){
-    $errors = [];
-    $success = [];
-$name = trim(htmlspecialchars(htmlentities($_POST['name'])));
-$id = $_GET['id'];
-    if(empty($name)){
-        echo $errors[] = 'حقل أسم الفئة مطلوب';
-    }elseif (strlen($name)< 6){
-        echo $errors[] = ' الأسم لا يقبل أقل من او يساوى 5 أحرف';
-    }elseif (strlen($name)> 30){
-        echo $errors[] = ' الأسم لا يقبل أكثر من او يساوى 30 حرف';
-    }else{
-        echo $success = "تم تعديل الفئة بنجاح";
+    
+    
+    require_once '../app/config.php';
+    $conn = mysqli_connect(hostname, username, password, database);
+    
+    if (!$conn) {
+        echo "connect error " . mysqli_connect_error($conn);
     }
-
-if(empty($errors)){
-    $conn = mysqli_connect(hostname,username,password,database);
-
-    $sql = "SELECT * FROM `categories` WHERE `id` = '$id'";
-    $edit = mysqli_query($conn,$sql);
-}
-}
+    
+    
+    if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['name'])) {
+        
+        $name = trim(htmlspecialchars(htmlentities($_POST['name'])));
+        $id = $_GET['id'];
+        
+        // echo $title;
+        
+        if (strlen($name) < 3) {
+            $_SESSION['errors'] = "title of task must be greater than 3 chars ";
+        }
+        
+        
+        if (empty($_SESSION['errors'])) {
+            $sql = "UPDATE `categories` SET `name`='$name' WHERE `id` = $id ";
+            $result = mysqli_query($conn, $sql);
+            // echo mysqli_affected_rows($conn);
+            if ($result) {
+                $_SESSION['success'] = "data updated succefully";
+            }
+        } else {
+            header("location:../views/dashboard/categories/edit.php");
+            die;
+            
+        }
+        
+        
+        // redirection
+        header("location:../views/dashboard/categories/edit.php");
+        
+    }

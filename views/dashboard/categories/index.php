@@ -4,7 +4,6 @@
     $conn = mysqli_connect(hostname, username, password, database);
     $sql = "SELECT * FROM `categories` ORDER BY id DESC";
     $result = mysqli_query($conn, $sql);
-    $rowGet = "SELECT * FROM `categories` WHERE `id` = 'id'"
 
 ?>
 <!DOCTYPE html>
@@ -148,10 +147,12 @@
                                             <td><?php echo $row['name']; ?></td>
                                             <td>
                                                 
-                                                <a type="button" data-toggle="modal"
-                                                   data-target="#EditCategory"
-                                                   href="<?php echo URL . "handlers/edit-categories.php?id=" . $row['id']; ?>"
-                                                   class="btn btn-small btn-info btn-sm text-white">تعديل</a>
+                                                <a type="button"
+                                                   
+                                                   href="<?php echo URL . "views/dashboard/categories/edit.php?id=" . $row['id']; ?>
+                                                " class="btn btn-small btn-info btn-sm text-white">تعديل</a>
+                                                
+                                                
                                                 <a type="button"
                                                    onclick="return confirm('هل أنت متأكد من أنك تريد حذف هذا العنصر؟');"
                                                    href="<?php echo URL . "handlers/delete-categories.php?id=" . $row['id']; ?>

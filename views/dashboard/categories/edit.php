@@ -1,4 +1,30 @@
-<?php require_once '../../../app/config.php'; ?>
+<?php
+    require_once '../../../app/config.php';
+    
+    
+    if (isset($_GET['id'])) {
+        $conn = mysqli_connect(hostname, username, password, database);
+        if (!$conn) {
+            $_SESSION['errors'] = "connect error " . mysqli_connect_error($conn);
+        }
+        
+        $id = $_GET['id'];
+        
+        $sql = "SELECT * FROM `categories`  WHERE `id` = '$id' ";
+        $result = mysqli_query($conn, $sql);
+        $row = mysqli_fetch_assoc($result);
+        if (!$row) {
+            $_SESSION['errors'] = "data not exists !";
+            header("location:../views/dashboard/categories/index.php");
+            die;
+        }
+    }
+    
+    // echo "<pre>";
+    // print_r();
+
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -115,10 +141,14 @@
                         <div class="card-body">
                             
                             
-                            <form method="POST" action="" role="form">
+                            <form method="POST"
+                                  action="<?php echo URL . "handlers/edit-categories.php?id=" . $_GET['id']; ?>"
+                                  role="form">
+                                
                                 <div class="form-group col-6 mb-3">
                                     <label for="exampleInputCategory">أسم الفئة</label>
-                                    <input type="text" name="name" id="name" value="" class="form-control"
+                                    <input type="text" name="name" id="name" value="<?php echo $row['name']; ?>"
+                                           class="form-control"
                                            id="exampleInputCategory" placeholder="أدخل أسم الفئة">
                                 </div>
                                 <div class="row text-center">
