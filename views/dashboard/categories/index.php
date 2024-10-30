@@ -237,52 +237,6 @@
 <!--End Store Modal-->
 
 
-<!--Start Edit Modal-->
-<!--    <div class="modal fade" id="EditCategory">-->
-<!--        <div class="modal-dialog">-->
-<!--            <div class="modal-content">-->
-<!--                <div class="modal-header">-->
-<!--                    <h4 class="modal-title">تعديل الفئة</h4>-->
-<!--                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
-<!--                        <span aria-hidden="true">&times;</span></button>-->
-<!--                </div>-->
-<!--                <div class="modal-body">-->
-<!--                    <div class="row">-->
-<!--                        <div class="col-12">-->
-<!---->
-<!--                            <div class="card card-primary">-->
-<!---->
-<!--                                <!-- /.card-header -->-->
-<!--                                <!-- form start -->-->
-<!--                                <form method="POST" action="-->
-<?php //echo URL."handlers/edit-categories.php?id=" . $rowGet['id'] ?><!--" role="form">-->
-<!--                                    <div class="card-body">-->
-<!--                                        <div class="form-group">-->
-<!--                                            <label for="exampleInputCategory">أسم الفئة</label>-->
-<!--                                            <input type="text" name="name" id="name" value="" class="form-control"-->
-<!--                                                   id="exampleInputCategory" placeholder="أدخل أسم الفئة">-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                    <!-- /.card-body -->-->
-<!---->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="modal-footer justify-content-between">-->
-<!--                        <button type="submit" class="btn btn-outline-primary">تعديل البيانات</button>-->
-<!--                        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">إغلاق</button>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                </form>-->
-<!---->
-<!--            </div>-->
-<!--            <!-- /.modal-content -->-->
-<!--        </div>-->
-<!--        <!-- /.modal-dialog -->-->
-<!--    </div>-->
-<!--End Edit Modal-->
-
-
 <!-- jQuery -->
 <script src="<?php echo URL . "public/dashboard/"; ?>plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->

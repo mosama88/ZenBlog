@@ -142,14 +142,20 @@
                             
                             
                             <form method="POST"
-                                  action="<?php echo URL . "handlers/edit-categories.php?id=" . $_GET['id']; ?>"
+                                  action="<?php echo URL . 'handlers/edit-categories.php?id=' . $_GET['id']; ?>"
                                   role="form">
+                                
                                 
                                 <div class="form-group col-6 mb-3">
                                     <label for="exampleInputCategory">أسم الفئة</label>
-                                    <input type="text" name="name" id="name" value="<?php echo $row['name']; ?>"
-                                           class="form-control"
-                                           id="exampleInputCategory" placeholder="أدخل أسم الفئة">
+                                    <?php if (isset($row)) : ?>
+                                        <input type="text" name="name" id="name" value="<?php echo $row['name']; ?>"
+                                               class="form-control" placeholder="أدخل أسم الفئة">
+                                    <?php else : ?>
+                                        <p>لم يتم العثور على بيانات الفئة.</p>
+                                    <?php endif; ?>
+                                
+                                
                                 </div>
                                 <div class="row text-center">
                                     <div class=" col-12">

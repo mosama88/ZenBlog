@@ -1,49 +1,57 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-        <img src="<?php echo URL."public/dashboard/"?>dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+        <img src="<?php echo URL . "public/dashboard/" ?>dist/img/AdminLTELogo.png" alt="AdminLTE Logo"
+             class="brand-image img-circle elevation-3"
              style="opacity: .8">
         <span class="brand-text font-weight-light">AdminLTE 3</span>
     </a>
-
+    
     <!-- Sidebar -->
     <div class="sidebar">
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-                <img src="<?php echo URL."public/dashboard/"?>dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                <img src="<?php echo URL . "public/dashboard/" ?>dist/img/user2-160x160.jpg"
+                     class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
                 <a href="#" class="d-block">Alexander Pierce</a>
             </div>
         </div>
-
+        
         <!-- Sidebar Menu -->
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                 data-accordion="false">
-
+                
                 <li class="nav-item">
-                    <a href="<?php echo URL."views/dashboard/"; ?>index.php" class="nav-link active">
+                    <a href="<?php echo URL . "views/dashboard/"; ?>index.php" class="nav-link active">
                         <i class="nav-icon fas fa-th"></i>
                         <p>لوحة التحكم</p>
                     </a>
                 </li>
-
-
+                
+                
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
-                            الفئات
+                            الضبط العام
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="<?php echo URL ."views/dashboard/"?>categories/index.php" class="nav-link">
+                            <a href="<?php echo URL . "views/dashboard/" ?>categories/index.php" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>جدول الفئات</p>
+                                <p>الفئات</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?php echo URL . "views/dashboard/" ?>categories/index.php" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>المدن</p>
                             </a>
                         </li>
                     </ul>
@@ -66,13 +74,15 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/index2.html" class="nav-link">
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/index2.html"
+                               class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Dashboard v2</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/index3.html" class="nav-link">
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/index3.html"
+                               class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Dashboard v3</p>
                             </a>
@@ -80,7 +90,8 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/widgets.html" class="nav-link">
+                    <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/widgets.html"
+                       class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
                         <p>
                             Widgets
@@ -99,41 +110,42 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/layout/top-nav.html"
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/layout/top-nav.html"
                                class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Top Navigation</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/layout/boxed.html" class="nav-link">
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/layout/boxed.html"
+                               class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Boxed</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/layout/fixed-sidebar.html"
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/layout/fixed-sidebar.html"
                                class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Fixed Sidebar</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/layout/fixed-topnav.html"
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/layout/fixed-topnav.html"
                                class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Fixed Navbar</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/layout/fixed-footer.html"
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/layout/fixed-footer.html"
                                class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Fixed Footer</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/layout/collapsed-sidebar.html"
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/layout/collapsed-sidebar.html"
                                class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Collapsed Sidebar</p>
@@ -151,20 +163,22 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/charts/chartjs.html"
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/charts/chartjs.html"
                                class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>ChartJS</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/charts/flot.html" class="nav-link">
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/charts/flot.html"
+                               class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Flot</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/charts/inline.html" class="nav-link">
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/charts/inline.html"
+                               class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Inline</p>
                             </a>
@@ -181,49 +195,57 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/UI/general.html" class="nav-link">
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/UI/general.html"
+                               class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>General</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/UI/icons.html" class="nav-link">
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/UI/icons.html"
+                               class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Icons</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/UI/buttons.html" class="nav-link">
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/UI/buttons.html"
+                               class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Buttons</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/UI/sliders.html" class="nav-link">
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/UI/sliders.html"
+                               class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Sliders</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/UI/modals.html" class="nav-link">
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/UI/modals.html"
+                               class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Modals & Alerts</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/UI/navbar.html" class="nav-link">
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/UI/navbar.html"
+                               class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Navbar & Tabs</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/UI/timeline.html" class="nav-link">
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/UI/timeline.html"
+                               class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Timeline</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/UI/ribbons.html" class="nav-link">
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/UI/ribbons.html"
+                               class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Ribbons</p>
                             </a>
@@ -240,20 +262,22 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/forms/general.html" class="nav-link">
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/forms/general.html"
+                               class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>General Elements</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/forms/advanced.html"
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/forms/advanced.html"
                                class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Advanced Elements</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/forms/editors.html" class="nav-link">
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/forms/editors.html"
+                               class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Editors</p>
                             </a>
@@ -270,19 +294,22 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/tables/simple.html" class="nav-link">
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/tables/simple.html"
+                               class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Simple Tables</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/tables/data.html" class="nav-link">
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/tables/data.html"
+                               class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>DataTables</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/tables/jsgrid.html" class="nav-link">
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/tables/jsgrid.html"
+                               class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>jsGrid</p>
                             </a>
@@ -291,7 +318,8 @@
                 </li>
                 <li class="nav-header">EXAMPLES</li>
                 <li class="nav-item">
-                    <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/calendar.html" class="nav-link">
+                    <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/calendar.html"
+                       class="nav-link">
                         <i class="nav-icon far fa-calendar-alt"></i>
                         <p>
                             Calendar
@@ -300,7 +328,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/gallery.html" class="nav-link">
+                    <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/gallery.html"
+                       class="nav-link">
                         <i class="nav-icon far fa-image"></i>
                         <p>
                             Gallery
@@ -317,21 +346,21 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/mailbox/mailbox.html"
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/mailbox/mailbox.html"
                                class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Inbox</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/mailbox/compose.html"
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/mailbox/compose.html"
                                class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Compose</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/mailbox/read-mail.html"
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/mailbox/read-mail.html"
                                class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Read</p>
@@ -349,56 +378,56 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/examples/invoice.html"
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/examples/invoice.html"
                                class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Invoice</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/examples/profile.html"
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/examples/profile.html"
                                class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Profile</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/examples/e_commerce.html"
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/examples/e_commerce.html"
                                class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>E-commerce</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/examples/projects.html"
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/examples/projects.html"
                                class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Projects</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/examples/project_add.html"
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/examples/project_add.html"
                                class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Project Add</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/examples/project_edit.html"
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/examples/project_edit.html"
                                class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Project Edit</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/examples/project_detail.html"
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/examples/project_detail.html"
                                class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Project Detail</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/examples/contacts.html"
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/examples/contacts.html"
                                class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Contacts</p>
@@ -416,54 +445,56 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/examples/login.html"
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/examples/login.html"
                                class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Login</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/examples/register.html"
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/examples/register.html"
                                class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Register</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/examples/lockscreen.html"
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/examples/lockscreen.html"
                                class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Lockscreen</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/examples/legacy-user-menu.html"
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/examples/legacy-user-menu.html"
                                class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Legacy User Menu</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/examples/language-menu.html"
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/examples/language-menu.html"
                                class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Language Menu</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/examples/404.html" class="nav-link">
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/examples/404.html"
+                               class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Error 404</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/examples/500.html" class="nav-link">
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/examples/500.html"
+                               class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Error 500</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo URL."Templetes"; ?>/AdminLTE-3-RTL-master/pages/examples/blank.html"
+                            <a href="<?php echo URL . "Templetes"; ?>/AdminLTE-3-RTL-master/pages/examples/blank.html"
                                class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Blank Page</p>
