@@ -49,7 +49,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo URL . "views/dashboard/" ?>categories/index.php" class="nav-link">
+                            <a href="<?php echo URL . "views/dashboard/" ?>cities/index.php" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>المدن</p>
                             </a>

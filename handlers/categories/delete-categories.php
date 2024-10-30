@@ -1,5 +1,5 @@
 <?php
-    require_once '../app/config.php';
+    require_once '../../app/config.php';
     
     $errors = [];
     $success = "";
@@ -25,6 +25,6 @@
         $_SESSION['errors'] = $errors;
         $_SESSION['success'] = $success;
         
-        header("location: ../views/dashboard/categories/index.php");
+        header("location: ../../views/dashboard/categories/index.php");
         
     }

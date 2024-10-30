@@ -1,18 +1,12 @@
 <?php
-    require_once '../../../app/config.php';
-    
-    $conn = mysqli_connect(hostname, username, password, database);
-    $sql = "SELECT * FROM `categories` ORDER BY id DESC";
-    $result = mysqli_query($conn, $sql);
-
-?>
+    require_once '../../../app/config.php'; ?>
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Osama News | الفئات</title>
+    <title>Osama News | المدن</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font Awesome -->
@@ -66,13 +60,13 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">الفئات</h1>
+                        <h1 class="m-0 text-dark">المدن</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="<?php echo URL . "views/dashboard/index.php" ?>">لوحة
                                     التحكم</a></li>
-                            <li class="breadcrumb-item active">جدول الفئات</li>
+                            <li class="breadcrumb-item active">جدول المدن</li>
                         </ol>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
@@ -87,39 +81,17 @@
             <div class="row">
                 <!-- </div>-->
                 <div class="col-12">
-                    <?php
-                        if (!empty($_SESSION['errors']) && isset($_SESSION['errors'])):
-                            foreach ($_SESSION['errors'] as $error):
-                                ?>
-                                <div class="alert alert-danger" role="alert">
-                                    <?php echo $error; ?>
-                                </div>
-                            
-                            <?php
-                            endforeach;
-                            unset($_SESSION['errors']);
-                        endif;
-                    ?>
-                    <?php if (!empty($_SESSION['success']) && isset($_SESSION['success'])): ?>
-                        <div class="alert alert-success" role="alert">
-                            <?php echo $_SESSION['success']; ?>
-                        </div>
-                        <?php
-                        
-                        unset($_SESSION['success']);
-                    endif;
-                    ?>
                     
                     <div class="card">
                         <div class="card-header">
                             <div class="row">
                                 <div class="col-9">
-                                    <h5 class="">جدول الفئات</h5>
+                                    <h5 class="">جدول المدن</h5>
                                 </div>
                                 <div class="col-3">
                                     <button type="button" class="btn btn-primary" data-toggle="modal"
                                             data-target="#modal-primary">
-                                        أضف فئة جديده
+                                        أضف مدينه جديده
                                     </button>
                                 </div>
                             </div>
@@ -131,34 +103,22 @@
                                 <thead>
                                 <tr>
                                     <th>المسلسل</th>
-                                    <th>أسم الفئة</th>
+                                    <th>أسم المدينه</th>
                                     <th>العمليات</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <?php
-                                    $i = 0;
-                                    while ($row = mysqli_fetch_assoc($result)):
-                                        
-                                        $i++
-                                        ?>
-                                        <tr>
-                                            <td><?php echo $i; ?></td>
-                                            <td><?php echo $row['name']; ?></td>
-                                            <td>
-                                                
-                                                <a type="button"
-                                                   href="<?php echo URL . "views/dashboard/categories/edit.php?id=" . $row['id']; ?>
-                                                " class="btn btn-small btn-info btn-sm text-white">تعديل</a>
-                                                
-                                                
-                                                <a type="button"
-                                                   onclick="return confirm('هل أنت متأكد من أنك تريد حذف هذا العنصر؟');"
-                                                   href="<?php echo URL . "handlers/categories/delete-categories.php?id=" . $row['id']; ?>
-                                                " class="btn btn-small btn-danger btn-sm text-white">حذف</a>
-                                            </td>
-                                        </tr>
-                                    <?php endwhile; ?>
+                                <tr>
+                                    <td>X</td>
+                                    <td>X</td>
+                                    <td>
+                                        <a type="button" href="#"
+                                           class="btn btn-small btn-info btn-sm text-white">تعديل</a>
+                                        <a type="button" href="#"
+                                           class="btn btn-small btn-danger btn-sm text-white">حذف</a>
+                                    
+                                    </td>
+                                </tr>
                                 </tbody>
                                 
                                 </tfoot>
@@ -195,7 +155,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">أضافة فئة جديدة</h4>
+                <h4 class="modal-title">أضافة مدينه جديدة</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span></button>
             </div>
@@ -207,13 +167,13 @@
                             
                             <!-- /.card-header -->
                             <!-- form start -->
-                            <form method="POST" action="<?php echo URL . "handlers/categories/store-categories.php" ?>"
+                            <form method="POST" action="#"
                                   role="form">
                                 <div class="card-body">
                                     <div class="form-group">
-                                        <label for="exampleInputCategory">أسم الفئة</label>
+                                        <label for="exampleInputCategory">أسم المدينه</label>
                                         <input type="text" name="name" id="name" class="form-control"
-                                               id="exampleInputCategory" placeholder="أدخل أسم الفئة">
+                                               id="exampleInputCategory" placeholder="أدخل أسم المدينه">
                                     </div>
                                 </div>
                                 <!-- /.card-body -->
@@ -293,14 +253,7 @@
         });
     });
 </script>
-<script>
-    $("#modal-primary,#EditCategory").modal({
 
-        backdrop: "static",
-        keyboard: false,
-        show: false,
-    });
-</script>
 
 </body>
 

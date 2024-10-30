@@ -142,7 +142,7 @@
                             
                             
                             <form method="POST"
-                                  action="<?php echo URL . 'handlers/edit-categories.php?id=' . $_GET['id']; ?>"
+                                  action="<?php echo URL . 'handlers/categories/edit-categories.php?id=' . $_GET['id']; ?>"
                                   role="form">
                                 
                                 

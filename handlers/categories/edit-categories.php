@@ -1,7 +1,7 @@
 <?php
     
     
-    require_once '../app/config.php';
+    require_once '../../app/config.php';
     $conn = mysqli_connect(hostname, username, password, database);
     
     if (!$conn) {
@@ -29,13 +29,13 @@
                 $_SESSION['success'] = "data updated succefully";
             }
         } else {
-            header("location:../views/dashboard/categories/index.php");
+            header("location: ../../views/dashboard/categories/index.php");
             die;
             
         }
         
         
         // redirection
-        header("location:../views/dashboard/categories/index.php");
+        header("location: ../../views/dashboard/categories/index.php");
         
     }
