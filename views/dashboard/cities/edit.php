@@ -1,12 +1,13 @@
 <?php
-    require_once '../../../app/config.php'; ?>
+    require_once '../../../app/config.php';
+?>
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Osama News | المدن</title>
+    <title>Osama News | تعديل المدن</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font Awesome -->
@@ -36,9 +37,7 @@
     <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css">
     <!-- Custom style for RTL -->
     <link rel="stylesheet" href="<?php echo URL . "public/dashboard/"; ?>dist/css/custom.css">
-    
-    <link rel="stylesheet"
-          href="<?php echo URL . "public/dashboard/"; ?>plugins/datatables-bs4/css/dataTables.bootstrap4.css">
+
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -60,13 +59,14 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">المدن</h1>
+                        <h1 class="m-0 text-dark">تعديل المدينه</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="<?php echo URL . "views/dashboard/index.php" ?>">لوحة
-                                    التحكم</a></li>
-                            <li class="breadcrumb-item active">جدول المدن</li>
+                            <li class="breadcrumb-item"><a
+                                        href="<?php echo URL . "views/dashboard/cities/index.php" ?>">جدول
+                                    المدن</a></li>
+                            <li class="breadcrumb-item active"> تعديل المدينه</li>
                         </ol>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
@@ -81,119 +81,64 @@
             <div class="row">
                 <!-- </div>-->
                 <div class="col-12">
-                    
                     <div class="card">
                         <div class="card-header">
                             <div class="row">
                                 <div class="col-9">
-                                    <h5 class="">جدول المدن</h5>
-                                </div>
-                                <div class="col-3">
-                                    <button type="button" class="btn btn-primary" data-toggle="modal"
-                                            data-target="#modal-primary">
-                                        أضف مدينه جديده
-                                    </button>
+                                    <h5 class=""> تعديل المدينه</h5>
                                 </div>
                             </div>
                         </div>
                         
                         <!-- /.card-header -->
                         <div class="card-body">
-                            <table id="example2" class="table table-bordered table-hover">
-                                <thead>
-                                <tr>
-                                    <th>المسلسل</th>
-                                    <th>أسم المدينه</th>
-                                    <th>العمليات</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>X</td>
-                                    <td>X</td>
-                                    <td>
-                                        <a type="button" href="<?php echo URL . "views/dashboard/cities/edit.php"; ?>"
-                                           class="btn btn-small btn-info btn-sm text-white">تعديل</a>
-                                        <a type="button" href="#"
-                                           class="btn btn-small btn-danger btn-sm text-white">حذف</a>
-                                    
-                                    </td>
-                                </tr>
-                                </tbody>
-                                
-                                </tfoot>
-                            </table>
-                        </div>
-                        <!-- /.card-body -->
-                    </div>
-                    <!-- /.card -->
-                    
-                    <!-- /.card -->
-                </div>
-                <!-- /.col -->
-            </div>
-            <!-- /.row -->
-        </section>
-        
-        
-        <!-- /.content -->
-    </div>
-    <!-- /.content-wrapper -->
-    <?php include MAIN_PATH . 'views/dashboard/layouts/footer.php' ?>
-    
-    <!-- Control Sidebar -->
-    <aside class="control-sidebar control-sidebar-dark">
-        <!-- Control sidebar content goes here -->
-    </aside>
-    <!-- /.control-sidebar -->
-</div>
-<!-- ./wrapper -->
-
-
-<!--Start Store Modal-->
-<div class="modal fade" id="modal-primary">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">أضافة مدينه جديدة</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span></button>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-12">
-                        
-                        <div class="card card-primary">
                             
-                            <!-- /.card-header -->
-                            <!-- form start -->
-                            <form method="POST" action="#"
-                                  role="form">
-                                <div class="card-body">
-                                    <div class="form-group">
-                                        <label for="exampleInputCategory">أسم المدينه</label>
-                                        <input type="text" name="name" id="name" class="form-control"
-                                               id="exampleInputCategory" placeholder="أدخل أسم المدينه">
+                            
+                            <form method="POST" action="#" role="form">
+                                <div class="form-group col-6 mb-3">
+                                    <label for="exampleInputCategory">أسم المدينه</label>
+                                    
+                                    <input type="text" name="name" id="name" value=""
+                                           class="form-control" placeholder="أدخل أسم المدينه">
+                                
+                                
+                                </div>
+                                <div class="row text-center">
+                                    <div class=" col-12">
+                                        <button type="submit" class="btn btn-outline-primary">تعديل البيانات</button>
                                     </div>
                                 </div>
-                                <!-- /.card-body -->
-                        
                         </div>
+                    
                     </div>
                 </div>
-                <div class="modal-footer justify-content-between">
-                    <button type="submit" class="btn btn-outline-primary">تأكيد البيانات</button>
-                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">إغلاق</button>
-                </div>
+                </form>
+            
             </div>
-            </form>
-        
-        </div>
-        <!-- /.modal-content -->
+            <!-- /.card-body -->
     </div>
-    <!-- /.modal-dialog -->
+    <!-- /.card -->
+    
+    <!-- /.card -->
 </div>
-<!--End Store Modal-->
+<!-- /.col -->
+</div>
+<!-- /.row -->
+</section>
+
+
+<!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<?php include MAIN_PATH . 'views/dashboard/layouts/footer.php' ?>
+
+<!-- Control Sidebar -->
+<aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+</aside>
+<!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
 
 
 <!-- jQuery -->
@@ -235,25 +180,6 @@
 <script src="<?php echo URL . "public/dashboard/"; ?>dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo URL . "public/dashboard/"; ?>dist/js/demo.js"></script>
-
-<!-- DataTables -->
-<script src="<?php echo URL . "public/dashboard/"; ?>plugins/datatables/jquery.dataTables.js"></script>
-<script src="<?php echo URL . "public/dashboard/"; ?>plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
-<!-- page script -->
-<script>
-    $(function () {
-        $("#example1").DataTable();
-        $('#example2').DataTable({
-            "paging": true,
-            "lengthChange": false,
-            "searching": false,
-            "ordering": true,
-            "info": true,
-            "autoWidth": false,
-        });
-    });
-</script>
-
 
 </body>
 
