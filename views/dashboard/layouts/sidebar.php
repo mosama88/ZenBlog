@@ -54,6 +54,13 @@
                                 <p>المدن</p>
                             </a>
                         </li>
+                        
+                        <li class="nav-item">
+                            <a href="<?php echo URL . "views/dashboard/" ?>holidays/index.php" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>الأجازات الرسمية</p>
+                            </a>
+                        </li>
                     </ul>
                 </li>
                 <!-- Add icons to the links using the .nav-icon class
