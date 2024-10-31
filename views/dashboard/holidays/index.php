@@ -129,15 +129,21 @@
                                 <thead>
                                 <tr>
                                     <th>المسلسل</th>
-                                    <th>أسم الأجازه الرسمية</th>
+                                    <th>الأجازه الرسمية</th>
+                                    <th>من</th>
+                                    <th>الى</th>
+                                    <th>عدد الأيام</th>
                                     <th>العمليات</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 
                                 <tr>
-                                    <td></td>
-                                    <td></td>
+                                    <td>X</td>
+                                    <td>X</td>
+                                    <td>X</td>
+                                    <td>X</td>
+                                    <td>X</td>
                                     <td>
                                         <a type="button"
                                            href="<?php echo URL . "views/dashboard/holidays/edit.php"; ?>"
@@ -205,6 +211,24 @@
                                         <label for="exampleInputCategory">أسم الأجازه الرسمية</label>
                                         <input type="text" name="name" id="name" class="form-control"
                                                id="exampleInputCategory" placeholder="أدخل أسم الأجازه الرسمية">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="exampleInputCategory">من يوم</label>
+                                        <input type="text" name="from" id="from" class="form-control"
+                                               id="exampleInputCategory"/>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="exampleInputCategory">إلى يوم</label>
+                                        <input type="text" name="to" id="to" class="form-control"
+                                               id="exampleInputCategory"/>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="exampleInputCategory">عدد الأيام</label>
+                                        <input type="text" name="num_of_days" id="num_of_days" class="form-control"
+                                               id="exampleInputCategory"/>
                                     </div>
                                 </div>
                                 <!-- /.card-body -->
