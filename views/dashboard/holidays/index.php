@@ -1,5 +1,10 @@
 <?php
     require_once '../../../app/config.php';
+    
+    $conn = mysqli_connect(hostname, username, password, database);
+    $sql = "SELECT * FROM holidays ORDER BY id DESC ";
+    $result = mysqli_query($conn, $sql);
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -137,24 +142,28 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                
-                                <tr>
-                                    <td>X</td>
-                                    <td>X</td>
-                                    <td>X</td>
-                                    <td>X</td>
-                                    <td>X</td>
-                                    <td>
-                                        <a type="button"
-                                           href="<?php echo URL . "views/dashboard/holidays/edit.php"; ?>"
-                                           class="btn btn-small btn-info btn-sm text-white">تعديل</a>
-                                        <a type="button"
-                                           href="<?php echo URL . "handlers/holidays/delete-holidays.php"; ?>"
-                                           class="btn btn-small btn-danger btn-sm text-white">حذف</a>
-                                    
-                                    </td>
-                                </tr>
-                                
+                                <?php
+                                    $i = 0;
+                                    while ($row = mysqli_fetch_assoc($result)):
+                                        $i++
+                                        ?>
+                                        <tr>
+                                            <td><?= $i ?></td>
+                                            <td><?= $row['name'] ?></td>
+                                            <td><?= $row['from'] ?></td>
+                                            <td><?= $row['to'] ?></td>
+                                            <td><?= $row['num_of_days'] ?></td>
+                                            <td>
+                                                <a type="button"
+                                                   href="<?php echo URL . "views/dashboard/holidays/edit.php?id=" . $row['id']; ?>"
+                                                   class="btn btn-small btn-info btn-sm text-white">تعديل</a>
+                                                <a type="button"
+                                                   href="<?php echo URL . "handlers/holidays/delete-holidays.php?id=" . $row['id']; ?>"
+                                                   class="btn btn-small btn-danger btn-sm text-white">حذف</a>
+                                            
+                                            </td>
+                                        </tr>
+                                    <?php endwhile; ?>
                                 </tbody>
                                 
                                 </tfoot>
@@ -215,19 +224,19 @@
                                     
                                     <div class="form-group">
                                         <label for="exampleInputCategory">من يوم</label>
-                                        <input type="text" name="from" id="from" class="form-control"
+                                        <input type="date" name="from" id="from" class="form-control"
                                                id="exampleInputCategory"/>
                                     </div>
                                     
                                     <div class="form-group">
                                         <label for="exampleInputCategory">إلى يوم</label>
-                                        <input type="text" name="to" id="to" class="form-control"
+                                        <input type="date" name="to" id="to" class="form-control"
                                                id="exampleInputCategory"/>
                                     </div>
                                     
                                     <div class="form-group">
                                         <label for="exampleInputCategory">عدد الأيام</label>
-                                        <input type="text" name="num_of_days" id="num_of_days" class="form-control"
+                                        <input type="number" name="num_of_days" id="num_of_days" class="form-control"
                                                id="exampleInputCategory"/>
                                     </div>
                                 </div>

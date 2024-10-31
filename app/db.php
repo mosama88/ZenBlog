@@ -56,5 +56,38 @@
     mysqli_query($conn, $cities_table);
     mysqli_close($conn);
     //##############################################
+    
+    $conn = mysqli_connect(hostname, username, password, database);
+    
+    $holidays_table = " CREATE TABLE IF NOT EXISTS holidays(
+    `id` INT PRIMARY KEY AUTO_INCREMENT,
+   `name` VARCHAR(250) NOT NULL,
+     `from` DATE NOT NULL,
+     `to` DATE NOT NULL,
+     `num_of_days` INT NOT NULL,
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)";
+    
+    $result = mysqli_query($conn, $holidays_table);
+    mysqli_close($conn);
 
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
