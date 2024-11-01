@@ -12,8 +12,8 @@
             echo $errors[] = 'حقل أسم الفئة مطلوب';
         } elseif (strlen($name) < 3) {
             echo $errors[] = ' الأسم لا يقبل أقل من او يساوى 3 أحرف';
-        } elseif (strlen($name) > 30) {
-            echo $errors[] = ' الأسم لا يقبل أكثر من او يساوى 30 حرف';
+        } elseif (maxValidInput($name, 100)) {
+            echo $errors[] = ' الأسم لا يقبل أكثر من او يساوى 100 حرف';
         } else {
             echo $success = "تم أضافة الفئة بنجاح";
         }

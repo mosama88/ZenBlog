@@ -10,8 +10,8 @@
             echo $errors[] = "حقل الاسم مطلوب";
         } elseif (strlen($name) < 5) {
             echo $errors[] = "يجب ان يكون الحقل أكثر من 5 أحرف";
-        } elseif (strlen($name) > 30) {
-            echo $errors[] = "يجب ان يكون الحقل أقل من 30 أحرف";
+        } elseif (maxValidInput($name, 100)) {
+            echo $errors[] = "يجب ان يكون الحقل أقل من 100 أحرف";
         } else {
             echo $success = "تم أضافة المدينه بنجاح";
         }

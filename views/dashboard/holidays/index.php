@@ -325,6 +325,30 @@
         show: false,
     });
 </script>
+<script>
+    $(document).ready(function () {
+        // تشغيل الحساب عند تغيير أحد المدخلات
+        $("#from, #to").on("change", function () {
+            let fromDate = moment($("#from").val());
+            let toDate = moment($("#to").val());
+
+            // التحقق من صحة كلا التاريخين
+            if (fromDate.isValid() && toDate.isValid()) {
+                let totalNumOfDays = toDate.diff(fromDate, 'days') + 1;
+                $("#num_of_days").val(totalNumOfDays);
+            } else {
+                $("#num_of_days").val(""); // إفراغ الحقل إذا كانت التواريخ غير صالحة
+            }
+        });
+    });
+    // moment(): يحول قيمة التاريخ إلى كائن moment لسهولة الحساب.
+    // diff(): تقوم بحساب الفرق بين toDate و fromDate بالأيام. إضافة +1 يضمن احتساب اليوم نفسه.
+    //     التأكد من صحة التواريخ: باستخدام isValid() للتأكد من أن التواريخ مدخلة بشكل صحيح.
+    // تشير 'days' إلى وحدة الفرق التي ترغب في حسابها. عند تمرير 'days' كمعامل، يقوم moment.js بحساب الفرق بين تاريخين بوحدة الأيام.
+    // 1 + لحساب نفس اليوم
+    //The line toDate.diff(fromDate, 'days') calculates the difference in days between two dates using the moment.js library. Let’s break it down in detail:
+    //Unit Flexibility: By changing 'days' to 'months', 'years', etc., you can calculate the difference in various units (e.g., months or years).
+</script>
 
 
 </body>

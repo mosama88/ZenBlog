@@ -16,8 +16,8 @@
             echo $errors[] = "الحقل الأسم مطلوب";
         } elseif (minValidInput($name, 5)) {
             echo $errors[] = "يجب أن يكون الحقل اكثر من 5 أحرف";
-        } elseif (maxValidInput($name, 30)) {
-            echo $errors[] = "يجب أن يكون الحقل أقل من 30 أحرف";
+        } elseif (maxValidInput($name, 100)) {
+            echo $errors[] = "يجب أن يكون الحقل أقل من 100 أحرف";
         }
         
         //Validation From
