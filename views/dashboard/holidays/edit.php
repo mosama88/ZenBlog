@@ -112,7 +112,7 @@
                             
                             
                             <form method="POST"
-                                  action="<?= URL . "handlers/holidays/edit-holidays.php" . $_GET['id']; ?>"
+                                  action="<?= URL . "handlers/holidays/edit-holidays.php?id=" . $_GET['id']; ?>"
                                   role="form">
                                 <div class="row mx-auto">
                                     <div class="card-body">

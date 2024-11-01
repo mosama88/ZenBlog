@@ -157,7 +157,8 @@
                                                 <a type="button"
                                                    href="<?php echo URL . "views/dashboard/holidays/edit.php?id=" . $row['id']; ?>"
                                                    class="btn btn-small btn-info btn-sm text-white">تعديل</a>
-                                                <a type="button"
+                                                <a type="button" onclick="return confirm('هل انت متأكد من عملية الحذف')"
+                                                   ;
                                                    href="<?php echo URL . "handlers/holidays/delete-holidays.php?id=" . $row['id']; ?>"
                                                    class="btn btn-small btn-danger btn-sm text-white">حذف</a>
                                             
