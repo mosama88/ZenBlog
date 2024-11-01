@@ -1,5 +1,22 @@
 <?php
     require_once '../../../app/config.php';
+    if (isset($_GET['id']) && is_numeric($_GET['id'])) {
+        $errors = [];
+        $_SESSION['errors'] = $errors;
+        $conn = mysqli_connect(hostname, username, password, database);
+        if (!$conn) {
+            echo $errors[] = "خطأ فى الاتصال بقاعدة البيانات" . mysqli_connect_error($conn);
+        }
+        $id = $_GET['id'];
+        $sql = "SELECT * FROM holidays WHERE `id` = '$id'";
+        $result = mysqli_query($conn, $sql);
+        $row = mysqli_fetch_assoc($result);
+        if (!$row) {
+            echo $_SESSION['errors'][] = "البيانات غير موجودة بقاعدة البيانات";
+            redirect(URL . "views/dashboard/holidays/index.php");
+        }
+    }
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -80,7 +97,7 @@
         <section class="content">
             <div class="row">
                 <!-- </div>-->
-                <div class="col-12">
+                <div class="col-10 mx-auto">
                     <div class="card">
                         <div class="card-header">
                             <div class="row">
@@ -91,20 +108,46 @@
                         </div>
                         
                         <!-- /.card-header -->
-                        <div class="card-body">
+                        <div class="card-body col-12">
                             
                             
                             <form method="POST"
-                                  action="<?= URL . "handlers/holidays/edit-holidays.php"; ?>"
+                                  action="<?= URL . "handlers/holidays/edit-holidays.php" . $_GET['id']; ?>"
                                   role="form">
-                                <div class="form-group col-6 mb-3">
-                                    <label for="exampleInputCategory">أسم الأجازه الرسمية</label>
-                                    
-                                    <input type="text" name="name" id="name" value=""
-                                           class="form-control" placeholder="أدخل أسم الأجازه الرسمية">
-                                
+                                <div class="row mx-auto">
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <label for="exampleInputCategory">أسم الأجازه الرسمية</label>
+                                            <input type="text" name="name" id="name" value="<?= $row['name'] ?>"
+                                                   class="form-control"
+                                                   id="exampleInputCategory" placeholder="أدخل أسم الأجازه الرسمية">
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-6">
+                                                <label for="exampleInputCategory">من يوم</label>
+                                                <input type="date" name="from" id="from" value="<?= $row['from'] ?>"
+                                                       class="form-control"
+                                                       id="exampleInputCategory"/>
+                                            </div>
+                                            
+                                            <div class="form-group col-6">
+                                                <label for="exampleInputCategory">إلى يوم</label>
+                                                <input type="date" name="to" id="to" value="<?= $row['to'] ?>"
+                                                       class="form-control"
+                                                       id="exampleInputCategory"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputCategory">عدد الأيام</label>
+                                            <input type="number" name="num_of_days" value="<?= $row['num_of_days'] ?>"
+                                                   id="num_of_days"
+                                                   class="form-control"
+                                                   id="exampleInputCategory"/>
+                                        </div>
+                                    </div>
                                 
                                 </div>
+                                
                                 <div class="row text-center">
                                     <div class=" col-12">
                                         <button type="submit" class="btn btn-outline-primary">تعديل البيانات</button>
@@ -183,6 +226,24 @@
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo URL . "public/dashboard/"; ?>dist/js/demo.js"></script>
 
+
+<script>
+    $(document).ready(function () {
+        // تشغيل الحساب عند تغيير أحد المدخلات
+        $("#from, #to").on("change", function () {
+            let fromDate = moment($("#from").val());
+            let toDate = moment($("#to").val());
+
+            // التحقق من صحة كلا التاريخين
+            if (fromDate.isValid() && toDate.isValid()) {
+                let totalNumOfDays = toDate.diff(fromDate, 'days') + 1;
+                $("#num_of_days").val(totalNumOfDays);
+            } else {
+                $("#num_of_days").val(""); // إفراغ الحقل إذا كانت التواريخ غير صالحة
+            }
+        });
+    });
+</script>
 </body>
 
 </html>
